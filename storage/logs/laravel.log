@@ -4423,3 +4423,33 @@ into your web browser: [http://latest.com/password/reset/b1f175ab6750eb438fe6df1
 [stacktrace]
 #0 {main}
 "} 
+[2020-08-07 14:54:53] local.ERROR: Class 'VIACreative\SudoSu\ServiceProvider' not found {"exception":"[object] (Error(code: 0): Class 'VIACreative\\SudoSu\\ServiceProvider' not found at D:\\phpstudy\\WWW\\laravelstudy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php:690)
+[stacktrace]
+#0 D:\\phpstudy\\WWW\\laravelstudy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(624): Illuminate\\Foundation\\Application->resolveProvider('VIACreative\\\\Sud...')
+#1 D:\\phpstudy\\WWW\\laravelstudy\\app\\Providers\\AppServiceProvider.php(18): Illuminate\\Foundation\\Application->register('VIACreative\\\\Sud...')
+#2 D:\\phpstudy\\WWW\\laravelstudy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(627): App\\Providers\\AppServiceProvider->register()
+#3 D:\\phpstudy\\WWW\\laravelstudy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register(Object(App\\Providers\\AppServiceProvider))
+#4 D:\\phpstudy\\WWW\\laravelstudy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(604): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#5 D:\\phpstudy\\WWW\\laravelstudy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#6 D:\\phpstudy\\WWW\\laravelstudy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(230): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#7 D:\\phpstudy\\WWW\\laravelstudy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#8 D:\\phpstudy\\WWW\\laravelstudy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(135): Illuminate\\Foundation\\Http\\Kernel->bootstrap()
+#9 D:\\phpstudy\\WWW\\laravelstudy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(109): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#10 D:\\phpstudy\\WWW\\laravelstudy\\public\\index.php(54): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#11 {main}
+"} 
+[2020-08-07 14:54:57] local.ERROR: Class 'VIACreative\SudoSu\ServiceProvider' not found {"exception":"[object] (Error(code: 0): Class 'VIACreative\\SudoSu\\ServiceProvider' not found at D:\\phpstudy\\WWW\\laravelstudy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php:690)
+[stacktrace]
+#0 D:\\phpstudy\\WWW\\laravelstudy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(624): Illuminate\\Foundation\\Application->resolveProvider('VIACreative\\\\Sud...')
+#1 D:\\phpstudy\\WWW\\laravelstudy\\app\\Providers\\AppServiceProvider.php(18): Illuminate\\Foundation\\Application->register('VIACreative\\\\Sud...')
+#2 D:\\phpstudy\\WWW\\laravelstudy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(627): App\\Providers\\AppServiceProvider->register()
+#3 D:\\phpstudy\\WWW\\laravelstudy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register(Object(App\\Providers\\AppServiceProvider))
+#4 D:\\phpstudy\\WWW\\laravelstudy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(604): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#5 D:\\phpstudy\\WWW\\laravelstudy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#6 D:\\phpstudy\\WWW\\laravelstudy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(230): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#7 D:\\phpstudy\\WWW\\laravelstudy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#8 D:\\phpstudy\\WWW\\laravelstudy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(135): Illuminate\\Foundation\\Http\\Kernel->bootstrap()
+#9 D:\\phpstudy\\WWW\\laravelstudy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(109): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#10 D:\\phpstudy\\WWW\\laravelstudy\\public\\index.php(54): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#11 {main}
+"} 
