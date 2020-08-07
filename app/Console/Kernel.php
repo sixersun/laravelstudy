@@ -26,6 +26,7 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')->hourly();
         $schedule->command('laravel:calculate-active-user')->hourly();
+        $schedule->command('laravel:sync-user-actived-at')->dailyAt('00:00');
     }
 
     /**
