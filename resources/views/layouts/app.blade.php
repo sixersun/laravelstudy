@@ -9,8 +9,9 @@
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <title>@yield('title', 'MY BBS') - MY BBS</title>
-  <meta name="description" content="@yield('description', '代码爱好者')" />
+  <title>@yield('title', 'PHP爱好者') - {{ setting('site_name', 'PHP爱好者') }}</title>
+  <meta name="description" content="@yield('description', setting('seo_description', 'PHP爱好者'))" />
+  <meta name="keyword" content="@yield('keyword', setting('seo_keyword', 'PHP爱好者'))" />
   <!-- Styles -->
   <link href="{{ mix('css/app.css') }}" rel="stylesheet">
   @yield('styles')
