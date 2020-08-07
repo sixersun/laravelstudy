@@ -22,15 +22,21 @@
     <ul class="navbar-nav navbar-right">
         <!-- Authentication Links -->
         <?php if(auth()->guard()->guest()): ?>
-        <li class="nav-item"><a class="nav-link" href="<?php echo e(route('login')); ?>">登录</a></li>
-        <li class="nav-item"><a class="nav-link" href="<?php echo e(route('register')); ?>">注册</a></li>
+          <li class="nav-item"><a class="nav-link" href="<?php echo e(route('login')); ?>">登录</a></li>
+          <li class="nav-item"><a class="nav-link" href="<?php echo e(route('register')); ?>">注册</a></li>
         <?php else: ?>
-        <li class="nav-item">
-          <a class="nav-link mt-1 mr-3 font-weight-bold" href="<?php echo e(route('topics.create')); ?>">
-            <i class="fa fa-plus"></i>
-          </a>
-        </li>
-        <li class="nav-item dropdown">
+          <li class="nav-item">
+            <a class="nav-link mt-1 mr-3 font-weight-bold" href="<?php echo e(route('topics.create')); ?>">
+              <i class="fa fa-plus"></i>
+            </a>
+          </li>
+          <li class="nav-item notification-badge">
+            <a class="nav-link mr-3 badge badge-pill badge-<?php echo e(Auth::user()->notification_count > 0 ? 'hint' : 'secondary'); ?> text-white" href="<?php echo e(route('notifications.index')); ?>">
+              <?php echo e(Auth::user()->notification_count); ?>
+
+            </a>
+          </li>
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <img src="<?php echo e(Auth::user()->avatar); ?>" class="img-responsive img-circle" width="30px" height="30px">
               <?php echo e(Auth::user()->name); ?>
