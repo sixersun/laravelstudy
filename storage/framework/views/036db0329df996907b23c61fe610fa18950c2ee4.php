@@ -1,85 +1,57 @@
 <?php $__env->startSection('content'); ?>
 
-<div class="container">
-  <div class="col-md-10 offset-md-1">
-    <div class="card ">
+  <div class="container">
+    <div class="col-md-10 offset-md-1">
+      <div class="card ">
 
-      <div class="card-header">
-        <h1>
-          Topic /
+        <div class="card-body">
+          <h2 class="">
+            <i class="far fa-edit"></i>
+            <?php if($topic->id): ?>
+            编辑话题
+            <?php else: ?>
+            新建话题
+            <?php endif; ?>
+          </h2>
+
+          <hr>
+
           <?php if($topic->id): ?>
-            Edit #<?php echo e($topic->id); ?>
-
+            <form action="<?php echo e(route('topics.update', $topic->id)); ?>" method="POST" accept-charset="UTF-8">
+              <input type="hidden" name="_method" value="PUT">
           <?php else: ?>
-            Create
+            <form action="<?php echo e(route('topics.store')); ?>" method="POST" accept-charset="UTF-8">
           <?php endif; ?>
-        </h1>
-      </div>
 
-      <div class="card-body">
-        <?php if($topic->id): ?>
-          <form action="<?php echo e(route('topics.update', $topic->id)); ?>" method="POST" accept-charset="UTF-8">
-          <input type="hidden" name="_method" value="PUT">
-        <?php else: ?>
-          <form action="<?php echo e(route('topics.store')); ?>" method="POST" accept-charset="UTF-8">
-        <?php endif; ?>
+              <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
 
-          <?php echo $__env->make('common.error', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+              <?php echo $__env->make('shared._error', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-          <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
+              <div class="form-group">
+                <input class="form-control" type="text" name="title" value="<?php echo e(old('title', $topic->title )); ?>" placeholder="请填写标题" required />
+              </div>
 
-          
-                <div class="form-group">
-                	<label for="title-field">Title</label>
-                	<input class="form-control" type="text" name="title" id="title-field" value="<?php echo e(old('title', $topic->title )); ?>" />
-                </div> 
-                <div class="form-group">
-                	<label for="body-field">Body</label>
-                	<textarea name="body" id="body-field" class="form-control" rows="3"><?php echo e(old('body', $topic->body )); ?></textarea>
-                </div> 
-                <div class="form-group">
-                    <label for="user_id-field">User_id</label>
-                    <input class="form-control" type="text" name="user_id" id="user_id-field" value="<?php echo e(old('user_id', $topic->user_id )); ?>" />
-                </div> 
-                <div class="form-group">
-                    <label for="category_id-field">Category_id</label>
-                    <input class="form-control" type="text" name="category_id" id="category_id-field" value="<?php echo e(old('category_id', $topic->category_id )); ?>" />
-                </div> 
-                <div class="form-group">
-                    <label for="reply_count-field">Reply_count</label>
-                    <input class="form-control" type="text" name="reply_count" id="reply_count-field" value="<?php echo e(old('reply_count', $topic->reply_count )); ?>" />
-                </div> 
-                <div class="form-group">
-                    <label for="view_count-field">View_count</label>
-                    <input class="form-control" type="text" name="view_count" id="view_count-field" value="<?php echo e(old('view_count', $topic->view_count )); ?>" />
-                </div> 
-                <div class="form-group">
-                    <label for="last_reply_user_id-field">Last_reply_user_id</label>
-                    <input class="form-control" type="text" name="last_reply_user_id" id="last_reply_user_id-field" value="<?php echo e(old('last_reply_user_id', $topic->last_reply_user_id )); ?>" />
-                </div> 
-                <div class="form-group">
-                    <label for="order-field">Order</label>
-                    <input class="form-control" type="text" name="order" id="order-field" value="<?php echo e(old('order', $topic->order )); ?>" />
-                </div> 
-                <div class="form-group">
-                	<label for="excerpt-field">Excerpt</label>
-                	<textarea name="excerpt" id="excerpt-field" class="form-control" rows="3"><?php echo e(old('excerpt', $topic->excerpt )); ?></textarea>
-                </div> 
-                <div class="form-group">
-                	<label for="slug-field">Slug</label>
-                	<input class="form-control" type="text" name="slug" id="slug-field" value="<?php echo e(old('slug', $topic->slug )); ?>" />
-                </div>
+              <div class="form-group">
+                <select class="form-control" name="category_id" required>
+                  <option value="" hidden disabled selected>请选择分类</option>
+                  <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                  <option value="<?php echo e($value->id); ?>"><?php echo e($value->name); ?></option>
+                  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                </select>
+              </div>
 
-          <div class="well well-sm">
-            <button type="submit" class="btn btn-primary">Save</button>
-            <a class="btn btn-link float-xs-right" href="<?php echo e(route('topics.index')); ?>"> <- Back</a>
-          </div>
-        </form>
+              <div class="form-group">
+                <textarea name="body" class="form-control" id="editor" rows="6" placeholder="请填入至少三个字符的内容。" required><?php echo e(old('body', $topic->body )); ?></textarea>
+              </div>
+
+              <div class="well well-sm">
+                <button type="submit" class="btn btn-primary"><i class="far fa-save mr-2" aria-hidden="true"></i> 保存</button>
+              </div>
+            </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 <?php $__env->stopSection(); ?>
-
 <?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\phpstudy\WWW\laravelstudy\resources\views/topics/create_and_edit.blade.php ENDPATH**/ ?>
