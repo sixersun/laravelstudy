@@ -9,7 +9,7 @@
   <!-- CSRF Token -->
   <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
 
-  <title><?php echo $__env->yieldContent('title', 'LaraBBS'); ?> - Laravel 进阶教程</title>
+  <title><?php echo $__env->yieldContent('title', 'LaraBBS'); ?> - MY BBS</title>
 
   <!-- Styles -->
   <link href="<?php echo e(mix('css/app.css')); ?>" rel="stylesheet">
