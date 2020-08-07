@@ -8,7 +8,7 @@ use Carbon\Carbon;
 trait LastActivedAtHelper
 {
     // 缓存相关
-    protected $hash_prefix = 'larabbs_last_actived_at_';
+    protected $hash_prefix = 'laravel_last_actived_at_';
     protected $field_prefix = 'user_';
 
     public function recordLastActivedAt()
