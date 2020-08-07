@@ -4415,3 +4415,11 @@ into your web browser: [http://latest.com/password/reset/b1f175ab6750eb438fe6df1
 #54 D:\\phpstudy\\WWW\\laravelstudy\\public\\index.php(54): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 {main}
 "} 
+[2020-08-07 14:21:23] local.ERROR: Cannot redeclare App\Http\Controllers\TopicsController::edit() {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare App\\Http\\Controllers\\TopicsController::edit() at D:\\phpstudy\\WWW\\laravelstudy\\app\\Http\\Controllers\\TopicsController.php:54)
+[stacktrace]
+#0 {main}
+"} 
+[2020-08-07 14:21:25] local.ERROR: Cannot redeclare App\Http\Controllers\TopicsController::edit() {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare App\\Http\\Controllers\\TopicsController::edit() at D:\\phpstudy\\WWW\\laravelstudy\\app\\Http\\Controllers\\TopicsController.php:54)
+[stacktrace]
+#0 {main}
+"} 
