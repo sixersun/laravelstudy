@@ -25,7 +25,7 @@
     </div>
 
     <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 topic-content">
-      <div class="card ">
+      <div class="card">
         <div class="card-body">
           <h1 class="text-center mt-3 mb-3">
             <?php echo e($topic->title); ?>
@@ -68,6 +68,15 @@
 
         </div>
       </div>
+
+      
+      <div class="card topic-reply mt-4">
+          <div class="card-body">
+              <?php echo $__env->make('topics._reply_box', ['topic' => $topic], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+              <?php echo $__env->make('topics._reply_list', ['replies' => $topic->replies()->with('user')->get()], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+          </div>
+      </div>
+
     </div>
   </div>
 <?php $__env->stopSection(); ?>
