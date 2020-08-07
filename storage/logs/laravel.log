@@ -5605,3 +5605,15 @@ $...')
 #57 D:\\phpstudy\\WWW\\laravelstudy\\public\\index.php(54): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
+[2020-08-07 17:45:25] local.ERROR: Trait 'App\Models\HasRoles' not found {"userId":1,"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait 'App\\Models\\HasRoles' not found at D:\\phpstudy\\WWW\\laravelstudy\\app\\Models\\User.php:13)
+[stacktrace]
+#0 {main}
+"} 
+[2020-08-07 17:45:28] local.ERROR: Trait 'App\Models\HasRoles' not found {"userId":1,"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait 'App\\Models\\HasRoles' not found at D:\\phpstudy\\WWW\\laravelstudy\\app\\Models\\User.php:13)
+[stacktrace]
+#0 {main}
+"} 
+[2020-08-07 17:45:31] local.ERROR: Trait 'App\Models\HasRoles' not found {"userId":1,"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait 'App\\Models\\HasRoles' not found at D:\\phpstudy\\WWW\\laravelstudy\\app\\Models\\User.php:13)
+[stacktrace]
+#0 {main}
+"} 
