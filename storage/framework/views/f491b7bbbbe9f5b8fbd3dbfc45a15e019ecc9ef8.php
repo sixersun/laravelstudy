@@ -31,7 +31,9 @@
 
     <?php echo $__env->make('layouts._footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
   </div>
-
+  <?php if(app()->isLocal()): ?>
+    <?php echo $__env->make('sudosu::user-selector', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+  <?php endif; ?>
   <!-- Scripts -->
   <script src="<?php echo e(mix('js/app.js')); ?>"></script>
 
